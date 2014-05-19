@@ -1,42 +1,111 @@
 // 12 Column fluid and responsive grid
 
-.container{
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 10px;
+.innerContainer {
+    max-width:1140px;
+    padding:0px 03.50877192982456%; /*40/1140*/
+    margin:0px auto;
 }
 
-.span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12{
-	display: block;
-	margin-bottom: 20px;
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+    margin-right:3.8%;
+    float:left;
+    min-height:1px;
+}
+.onecol {
+    width:4.85%;
+}
+.twocol {
+    width:13.45%;
+}
+.threecol {
+    width:22.05%;
+}
+.fourcol {
+    width:30.75%;
+}
+.fivecol {
+    width:39.45%;
+}
+.sixcol {
+    width:48%;
+}
+.sevencol {
+    width:56.75%;
+}
+.eightcol {
+    width:65.4%;
+}
+.ninecol {
+    width:74.05%;
+}
+.tencol {
+    width:82.7%;
+}
+.elevencol {
+    width:91.35%;
+}
+.twelvecol {
+    width:100%;
+    float:none;
+}
+.onecol.last, .twocol.last, .threecol.last, .fourcol.last, .fivecol.last, .sixcol.last, .sevencol.last, .eightcol.last, .ninecol.last, .tencol.last, .elevencol.last {
+    margin-right:0px;
+    float:right;
 }
 
-// Grid columns are stacked until the display size is greater than min-width
 
-@include mobilefirst($small-break) {
+// Media Queries
 
-    $unit: 6.2056333%; // Width of each grid column unit
-    $margin: 2.1277%; // Margin between the grid columns
-
-    .container{
-        padding:0 40px;
+// Small Moniters
+@media only screen and (max-width: 1023px) {
+body {
+    font-size:0.8em;
+    line-height:1.5em;
+}
+}
+// Tablet
+@include responsive($big-break) {
+    .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+        margin-right:3.8%;
     }
-
-    .group {
-        margin-left: -$margin;
+    .onecol {
+        width:13.45%;
     }
-
-    .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12{
-        float: left;
-        margin-left: $margin;
-        margin-bottom: 0;
-        @include box-sizing(border-box);
+    .onecol.standard {
+        width:4.85%;
     }
-
-    @for $i from 1 through 12 {
-        .span#{$i} {
-            width: ($unit * $i) + ($margin * ($i - 1));
-        }
+    .twocol.standard {
+        width:13.45%;
     }
-
+    .threecol.standard {
+        width:22.05%;
+    }
+    .threecol {
+        width:48%;
+    }
+    .twocol {
+        width:30.75%;
+    }
+    .twocol:nth-child(4n), .onecol:nth-child(6n), .threecol:nth-child(even) {
+        margin-right:0px;
+    }
+}
+// Mobile
+@include responsive($small-break) {
+    body {
+        -moz-text-size-adjust:none;
+        -webkit-text-size-adjust:none;
+        -ms-text-size-adjust:none;  
+    }
+    .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol, .standard {
+        width:auto !important;
+        float:none !important;
+        margin-left:0px;
+        margin-right:0px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .onecol.last, .twocol.last, .threecol.last, .fourcol.last, .fivecol.last, .sixcol.last, .sevencol.last, .eightcol.last, .ninecol.last, .tencol.last, .elevencol.last {
+        float:none;
+    }
 }
