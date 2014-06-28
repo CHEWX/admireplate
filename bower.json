@@ -3,7 +3,8 @@
     "name": "Motherplate",
     "authors": [
 
-        "Lee Munroe"
+        "Lee Munroe",
+        "Tom Hopcraft"
 
     ],
 
@@ -19,8 +20,8 @@
     "keywords": [
 
         "sass",
-	"framework",
-	"boileplate
+    	"framework",
+    	"boileplate
 
     ],
 
@@ -31,6 +32,8 @@
 
         "/images/sp.png",
         "/images/cat.jpg",
+        "/README.md",
+        "/LICENSE",
         "/example.html"
 
     ]
