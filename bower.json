@@ -9,7 +9,7 @@
     ],
 
     "description": "A boiler plate for new sites",
-    //"main": "jquery.flexslider.js",
+
     "repository": {
 
         "type" : "git",
