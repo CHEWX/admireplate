@@ -3,7 +3,7 @@
 Preview: http://leemunroe.github.io/motherplate/example.html
 
 ## What is this?
-This is a bare bones HTML/CSS framework I'll start off most web projects with.
+This is a bare bones HTML/CSS framework that Lee Munroe created. Over time that I have used it I have forked my own version to adapt to my own style of working.
 
 It includes a CSS reset and a bunch of minimal boilerplate styles that should come in useful for any project, including a responsive grid, typography, icons and forms.
 
@@ -14,6 +14,7 @@ It can be used for a static web project as is, or you can copy the CSS folder in
 ## Features
 * Uses SCSS partials to help structure the CSS.
 * Uses Compass to take advantage of CSS3 mixins so you don't have to worry about browser prefixes (-webkit- etc.).
+* Grunt to take care of the JS and minification.
 * Responsive-ready 12-column grid system to work across all devices.
 * Uses Font-Awesome icon fonts for icons.
 * Uses Normalize to reset browser styles.
@@ -24,7 +25,7 @@ It can be used for a static web project as is, or you can copy the CSS folder in
 This will vary depending on the framework you are using. The following is how to for a basic static website.
 
 ### Install Ruby
-Motherplate uses SASS and Compass, which rely on Ruby.
+Motherplate uses SASS, Compass and Grunt, which rely on Ruby and NodeJS.
 
 OSX comes pre-installed with Ruby but if you need to you can <a href="http://www.ruby-lang.org/en/downloads/">download ruby here</a>.
 
@@ -34,6 +35,27 @@ Open up terminal (or command line) and install compass .
 $ gem update --system
 $ gem install compass
 ```
+
+### Grunt
+
+Grunt will do the production part of your website - you do not need to run this while in development.
+
+### Grunt - To use
+
+Open up terminal (or command line)
+```
+npm install
+
+npm install -g grunt-cli
+
+close and re-open terminal
+
+npm install grunt-contrib-concat --save-dev
+
+npm install grunt-contrib-uglify --save-dev
+```
+Then just use 'grunt' in the command line to run concatination and minification
+
 
 ### Download Motherplate
 Download and copy the motherplate files into your new project folder.
@@ -55,9 +77,11 @@ If you were working on a Rails project for example, you could just copy the file
 A bare bones index.html template.
 
 ## CSS
-* `_config.scss` Put all your variables in here e.g. colors, padding, border radius - this helps with consistency across your project.
+* `_varibles.scss` Put all your variables in here e.g. colors, padding, border radius - this helps with consistency across your project.
+* `_elements.scss` All re-usable styles in here to keep to OOCSS - Remember DRY.
 * `_forms.scss` Some basic form styles.
 * `_grid.scss` A basic responsive grid system with 12 columns.
+* `_helper.scss` Helper classes.
 * `_icons.scss` This is Font Awesome's CSS stylesheet.
 * `_ie.scss` Any styles that you need to add in order for Internet Explorer to work.
 * `_layout.scss` This is where your main styles go. I typically have header, footer, logo classes here.
@@ -70,6 +94,7 @@ A bare bones index.html template.
 * `_reset.scss` This is normalize.
 * `_responsive.scss` Add any responsive styles here e.g. hide elements, show elements, resize elements.
 * `_shame.scss` Keep this to hand for any quick and dirty CSS you need to add but plan to tidy later.
+* `_site.scss` Any site specific styles - keep this to a minimum - Remember DRY.
 * `_tables.scss` Styles for tables.
 * `_type.scss` Basic styling for your typography.
 * `main.scss` This brings all the partials together. Compass only compiles files that don't have an underscore
@@ -82,9 +107,8 @@ Typical files I'll end up adding include _nav.scss, _home.scss.
 * I've included some basic Javascript including the latest jQuery and the document ready function.
 
 ## Images ##
-* There is a /img folder for images.
-* For images referenced in the CSS I tend to keep them in the css/assets/ folder e.g. sp.png is a sprite I can reference.
-* Images referenced in the HTML are stored in the /img folder.
+* There is a /assets/img folder for images.
+* The folder structure within this is self-explanitory.
 
 ## Fonts ##
 * Included font awesome for icons

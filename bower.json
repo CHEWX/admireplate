@@ -31,8 +31,8 @@
 
     "ignore" : [
 
-        "/images/sp.png",
-        "/images/cat.jpg",
+        "/assets/img/sp.png",
+        "/assets/img/images/cat.jpg",
         "/README.md",
         "/LICENSE",
         "/example.html"
