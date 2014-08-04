@@ -7,8 +7,6 @@ This is a bare bones HTML/CSS framework that Lee Munroe created. Over time that 
 
 It includes a CSS reset and a bunch of minimal boilerplate styles that should come in useful for any project, including a responsive grid, typography, icons and forms.
 
-It is not as in depth as something like <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and doesn't include styled components like <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>.
-
 It can be used for a static web project as is, or you can copy the CSS folder into an existing framework.
 
 ## Features
@@ -35,28 +33,6 @@ Open up terminal (or command line) and install compass .
 $ gem update --system
 $ gem install compass
 ```
-
-### Grunt
-
-Grunt will do the production part of your website - you do not need to run this while in development.
-
-### Grunt - To use
-
-Open up terminal (or command line)
-```
-npm install
-
-npm install -g grunt-cli
-
-close and re-open terminal
-
-npm install grunt-contrib-concat --save-dev
-
-npm install grunt-contrib-uglify --save-dev
-```
-Then just use 'grunt' in the command line to run concatination and minification
-
-
 ### Download Motherplate
 Download and copy the motherplate files into your new project folder.
 
@@ -87,7 +63,7 @@ A bare bones index.html template.
 * `_layout.scss` This is where your main styles go. I typically have header, footer, logo classes here.
 * `_links.scss` Styles for any text links and/or buttons.
 * `_media.scss` Styles for images, video etc.
-* `_mixins.scss` Reusabled SASS mixins e.g. clearfix.
+* `_mixins.scss` Reusable SASS mixins e.g. clearfix.
 * `_notifications.scss` Alerts to notify or give feedback to the user
 * `_other.scss` Small reusable other styles that don't fit the rest of the framework.
 * `_print.scss` Basic print stylesheets to make your pages look better when printed.
@@ -104,7 +80,7 @@ As your project grows and you need to add more styles just create new .scss file
 Typical files I'll end up adding include _nav.scss, _home.scss.
 
 ## JavaScript ##
-* I've included some basic Javascript including the latest jQuery and the document ready function.
+* I've included some basic Javascript including the latest jQuery and the document ready function. You only need to edit /assets/js/src/global.js for your site styles. You would then put any plugins with-in /assets/js/libs.
 
 ## Images ##
 * There is a /assets/img folder for images.
@@ -112,6 +88,27 @@ Typical files I'll end up adding include _nav.scss, _home.scss.
 
 ## Fonts ##
 * Included font awesome for icons
+
+## Grunt
+
+Grunt will do the production part of your website - you do not need to run this while in development.
+
+### To use
+
+Open up terminal (or command line)
+```
+npm install
+
+npm install -g grunt-cli
+
+close and re-open terminal
+
+npm install grunt-contrib-concat --save-dev
+
+npm install grunt-contrib-uglify --save-dev
+```
+Then just use 'grunt' in the command line to run concatination and minification
+
 
 ## Further Documentation ##
 * <a href="http://compass-style.org/">Compass Framework</a>
