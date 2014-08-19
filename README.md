@@ -5,12 +5,10 @@ This is a MAMP specific boilerplate but can be adapted to your own needs.
 ## Features
 * Uses SCSS partials to help structure the CSS.
 * Uses Compass to take advantage of CSS3 mixins so you don't have to worry about browser prefixes (-webkit- etc.).
-* Grunt to take care of the JS and minification.
+* Grunt to take care of watching SASS, JS and minification.
 * Responsive-ready 12-column grid system to work across all devices.
 * Uses Font-Awesome icon fonts for icons.
 * Uses Normalize to reset browser styles.
-* Only enough CSS to get you started; minimal visual styling with this boilerplate.
-* Only the HTML/JS you need to get started; very little components with this boilerplate.
 
 ### Install Ruby
 Motherplate uses SASS, Compass and Grunt, which rely on Ruby and NodeJS.
@@ -21,15 +19,32 @@ Open up terminal (or command line) and install compass .
 $ gem update --system
 $ gem install compass
 ```
-### Download Motherplate
-Download and copy the motherplate files into your new project folder.
 
-### Run compass watch
-In terminal go to your project folder and run compass.
+## Grunt
+
+Grunt will do the watching and production part of your website.
+
+### To use for sass watch
+
+Open up terminal (or command line)
 ```
-$ cd sites/mynewproject/
-$ compass watch
+npm install
+
+npm install -g grunt-cli
+
+close and re-open terminal
+
+npm install grunt-contrib-concat --save-dev
+
+npm install grunt-contrib-uglify --save-dev
+
+npm install grunt-contrib-compass --save-dev
+
+npm install grunt-contrib-watch --save-dev
 ```
+Then use 'grunt' in the command line to run the watch task in compass.
+
+Once you are ready to push live use 'grunt deploy' in the command line to run concatination and minification.
 
 ## CSS
 * `_varibles.scss` Put all your variables in here e.g. colors, padding, border radius - this helps with consistency across your project.
@@ -62,29 +77,9 @@ While dev'ing locally on mamp, you will need to add you plugins directly into th
 ## Fonts ##
 * Included font awesome for icons
 
-## Grunt
-
-Grunt will do the production part of your website - you do not need to run this while in development.
-
-### To use
-
-Open up terminal (or command line)
-```
-npm install
-
-npm install -g grunt-cli
-
-close and re-open terminal
-
-npm install grunt-contrib-concat --save-dev
-
-npm install grunt-contrib-uglify --save-dev
-```
-Then just use 'grunt' in the command line to run concatination and minification
-
-
 ## Further Documentation ##
 * <a href="http://compass-style.org/">Compass Framework</a>
+* <a href="http://gruntjs.com/">Grunt</a>
 * <a href="http://sass-lang.com/">SASS</a>
 * <a href="http://necolas.github.com/normalize.css/">normalize.css</a>
 * <a href="http://fontawesome.io/">Font Awesome</a>
