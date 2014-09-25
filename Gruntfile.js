@@ -26,13 +26,13 @@ module.exports = function(grunt) {
                     force: true
                 }
             }
-        },        
+        },
         watch: {
             sass: {
                 files: ['assets/css/scss/**/*.scss'],
                 tasks: ['compass:dev']
-            }            
-        }     
+            }
+        }
 
     });
 
