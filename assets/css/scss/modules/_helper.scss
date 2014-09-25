@@ -1,50 +1,46 @@
 .align-center {
-  text-align:center;
+  text-align: center;
 }
 
 .align-right {
-	text-align:right;
-}
-
-.center {
-	text-align:center;
+	text-align: right;
 }
 
 .clear {
-	clear:both;
+	clear: both;
 }
 
 .right {
-	float:right;
+	float: right;
 }
 
 .left {
-	float:left;
+	float: left;
 }
 
 .bare-list,
 %bare-list {
-	list-style:none;
-	padding-left:0;
-	margin-left:0;
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
 }
 
 .valign {
-	vertical-align:middle;
+	vertical-align: middle;
 }
 
 hr {
-	border:none;
-	border-bottom:1px solid #ddd;
-	margin:$padding 0;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	margin: $padding 0;
 }
 
 .subtle {
-	color:$subtle-color;
+	color: $c-subtle;
 }
 
 .relative {
-	position:relative;
+	position: relative;
 }
 
 html {
@@ -391,5 +387,28 @@ html {
 //	.p100 {padding:100px;}
 
 //	.auto-height {height: auto; min-height: 0;}
+
+
+	// Tab helpers
+	@include breakpoint(m) {
+
+		.mq__tab {
+			&--mt0 {
+			//	margin-top: 0;
+			}
+		}
+
+	}
+
+	// Mob helpers
+	@include breakpoint(s) {
+
+		.mq__mob {
+			&--mb0 {
+			//	margin-bottom: 10px;
+			}
+		}
+
+	}
 
 }

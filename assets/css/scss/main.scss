@@ -8,9 +8,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-// Set variables and reusable mixins
+// Set variables and reusable mixins/animations
 @import "base/variables";
 @import "base/mixins";
+@import "base/animations";
 
 // Import typical layout sass modules
 @import "layout/grid";
@@ -25,14 +26,13 @@
 // Use Font Awesome for icons
 @import "modules/icons";
 
-// Specific project styles, add any section specific sass modules here
+// Specific project styles
 @import "layout/site";
 
 // Main layout styles - l-header - l-footer
 @import "layout/layout";
 
-// Additional styles to think about
-@import "layout/responsive";
+// Print styles
 @import "base/print";
 
 // If IE support is needed

@@ -1,36 +1,42 @@
 // Notifications (alerts)
-.notification{
-	border:1px solid;
-	padding:10px;
-	margin-bottom:$padding;
+.notification {
+	border: 1px solid;
+	padding: 10px;
+	margin-bottom: $padding;
 	@include border-radius($br);
 	@include clearfix;
-	&.error{
-		border-color:$bad-color;
-		color:darken($bad-color,15);
-		background:lighten($bad-color,35);
+
+	&.error {
+		border-color: $c-bad;
+		color: darken($c-bad, 15);
+		background: lighten($c-bad, 35);
 	}
-	&.success{
-		border-color:$good-color;
-		color:darken($good-color,10);
-		background:lighten($good-color,45);
+
+	&.success {
+		border-color: $c-good;
+		color: darken($c-good, 10);
+		background: lighten($good-color, 45);
 	}
-	&.warning{
-		border-color:$warning-color;
-		color:darken($warning-color,10);
-		background:lighten($warning-color,40);
+
+	&.warning {
+		border-color: $c-warning;
+		color: darken($c-warning, 10);
+		background: lighten($c-warning,40);
 	}
-	&.info{
-		border-color:$info-color;
-		color:darken($info-color,10);
-		background:lighten($info-color,48);
+
+	&.info {
+		border-color: $c-info;
+		color: darken($c-info, 10);
+		background: lighten($c-info, 48);
 	}
-	&.empty{
-		text-align:center;
-		background:#f4f4f4;
-		border:1px dashed $silver;
+
+	&.empty {
+		text-align: center;
+		background: #f4f4f4;
+		border: 1px dashed $c-silver;
 	}
-	p:last-child{
-		margin-bottom:0;
+
+	p:last-child {
+		margin-bottom: 0;
 	}
 }
