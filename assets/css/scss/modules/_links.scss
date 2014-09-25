@@ -69,7 +69,7 @@ a {
 
 // Call to action - slightly bigger
 .btn-cta {
-	font-size: 1.6em;
+	@include rem(1.6);
 	padding: .8em 1.6em;
 }
 
