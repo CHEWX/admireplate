@@ -3,7 +3,7 @@ var touchDev = Modernizr.touch;
 
 $(document).ready(function(){
 
-	function camelCase();
+	camelCase();
 
 });
 

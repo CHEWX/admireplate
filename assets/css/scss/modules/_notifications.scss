@@ -15,7 +15,7 @@
 	&.success {
 		border-color: $c-good;
 		color: darken($c-good, 10);
-		background: lighten($good-color, 45);
+		background: lighten($c-good, 45);
 	}
 
 	&.warning {
