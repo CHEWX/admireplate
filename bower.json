@@ -1,9 +1,8 @@
 {
 
-    "name": "Motherplate",
+    "name": "Admireplate",
     "authors": [
 
-        "Lee Munroe",
         "Tom Hopcraft"
 
     ],
@@ -13,7 +12,7 @@
     "repository": {
 
         "type" : "git",
-        "url" : "https://github.com/CHEWX/motherplate.git"
+        "url" : "https://github.com/CHEWX/admireplate.git"
 
     },
 
@@ -22,12 +21,13 @@
         "sass",
     	"framework",
         "boileplate",
-        "motherplate"
+        "admireplate",
+        "grunt"
 
     ],
 
     "license": "Public",
-    "homepage": "https://github.com/CHEWX/motherplate",
+    "homepage": "https://github.com/CHEWX/admireplate",
 
     "ignore" : [
 

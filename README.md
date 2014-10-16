@@ -1,4 +1,4 @@
-# Motherplate - Boilerplate
+# Admireplate - Boilerplate
 
 This is a MAMP specific boilerplate but can be adapted to your own needs.
 
@@ -10,7 +10,7 @@ This is a MAMP specific boilerplate but can be adapted to your own needs.
 * Uses Normalize to reset browser styles.
 
 ### Install Ruby
-Motherplate uses SASS, Compass and Grunt, which rely on Ruby and NodeJS.
+Admireplate uses SASS, Compass and Grunt, which rely on Ruby and NodeJS.
 
 ### Install the compass gem
 Open up terminal (or command line) and install compass .
@@ -28,7 +28,6 @@ Grunt will do the watching and production part of your website.
 Open up terminal (or command line)
 ```
 npm install
-
 ```
 Then use 'grunt' in the command line to run the watch task in compass.
 
@@ -79,4 +78,4 @@ While dev'ing locally on MAMP, you will need to add you plugins directly into th
 
 ## Credit
 
-Motherplate was originally written by Lee Munroe.
+Admireplate was originally based on Motherplate written by Lee Munroe.
