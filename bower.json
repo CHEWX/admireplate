@@ -32,8 +32,9 @@
     "ignore" : [
 
         "/assets/img/sp.png",
-        "/assets/img/images/cat.jpg",
+        "/assets/img/cat.jpg",
         "/README.md",
+        "/bower.json",
         "/LICENSE",
         "/example.html"
 
