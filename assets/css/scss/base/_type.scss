@@ -1,6 +1,9 @@
 html {
 	font-size: 62.5%;
-	-webkit-font-smoothing: antialiased;
+   	-webkit-font-smoothing: antialiased;
+   	-moz-font-smoothing: antialiased;
+   	-o-font-smoothing: antialiased;
+   	font-smoothing: antialiased;
 
 	@include breakpoint(m) {
 		font-size: 56%;
