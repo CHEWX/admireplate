@@ -20,9 +20,18 @@ module.exports = function(grunt) {
             }
         },
         compass: {
+            deploy: {
+                options: {
+                    config: 'config.rb',
+                    outputStyle: 'compressed',
+                    force: true
+                }
+            },
             dev: {
                 options: {
                     config: 'config.rb',
+                    sourcemap: true,
+                    outputStyle: 'expanded',
                     force: true
                 }
             }
@@ -46,7 +55,7 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('deploy', ['concat','uglify','compass']);
+    grunt.registerTask('deploy', ['concat','uglify','compass:deploy']);
 
 
 };
