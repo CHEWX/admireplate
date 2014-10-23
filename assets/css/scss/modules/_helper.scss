@@ -1,21 +1,25 @@
-.align-center {
-  text-align: center;
-}
+.align {
+	&--center {
+		text-align: center;
+	}
 
-.align-right {
-	text-align: right;
+	&--right {
+		text-align: right;
+	}
 }
 
 .clear {
 	clear: both;
 }
 
-.right {
-	float: right;
-}
+.float {
+	&--right {
+		float: right;
+	}
 
-.left {
-	float: left;
+	&--left {
+		float: left;
+	}
 }
 
 .bare-list,
@@ -35,12 +39,25 @@ hr {
 	margin: $padding 0;
 }
 
+.relative {
+	position: relative;
+}
+
 .subtle {
 	color: $c-subtle;
 }
 
-.relative {
-	position: relative;
+.table {
+	display: table;
+	width: 100%;
+	height: 100%;
+
+	&__cell {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 html {
