@@ -13,7 +13,7 @@
 
     });
 
-    function camelCase() {
+    camelCase = function() {
 
     }
 
