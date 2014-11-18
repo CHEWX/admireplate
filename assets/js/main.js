@@ -1405,20 +1405,23 @@ window.Modernizr = (function( window, document, undefined ) {
 
 })(this, this.document);
 
-// Globals
-var touchDev = Modernizr.touch;
+(function($, document) {
+    // globals
+    var touchDev = Modernizr.touch;
 
-$(document).ready(function(){
+    $(document).ready(function() {
 
-	camelCase();
+    	camelCase();
 
-});
+    });
 
-$(window).load(function(){
+    $(window).load(function() {
 
 
-});
+    });
 
-function camelCase() {
+    function camelCase() {
 
-}
+    }
+
+}(jQuery, document));

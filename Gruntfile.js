@@ -19,6 +19,19 @@ module.exports = function(grunt) {
                 dest: 'assets/js/main.min.js'
             }
         },
+        autoprefixer: {
+            options: {
+                browsers: [
+                    'last 2 versions',
+                    'Explorer >= 8',
+                    'Android >= 3'
+                ]
+            },
+            dist: {
+                src: 'assets/css/main.css',
+                dest: 'assets/css/main.css'
+            }
+        },
         compass: {
             deploy: {
                 options: {
@@ -50,12 +63,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['watch']);
-    grunt.registerTask('deploy', ['concat','uglify','compass:deploy']);
+    grunt.registerTask('default', ['autoprefixer','watch']);
+    grunt.registerTask('deploy', ['concat','uglify','compass:deploy','autoprefixer']);
 
 
 };
