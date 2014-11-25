@@ -48,7 +48,7 @@ Once you are ready to push live use 'grunt deploy' in the command line to run co
 * `_ie.scss` Any styles that you need to add in order for Internet Explorer to work.
 * `_layout.scss` This is where your main styles go. I typically have header, footer, logo classes here.
 * `_shame.scss` Keep this to hand for any quick and dirty CSS you need to add but plan to tidy later.
-* `_site.scss` Any site specific styles - keep this to a minimum - Remember DRY.
+* `_site.scss` Any site specific styles - keep this to smaller parts, anything that doesn't warrent it's own Ui file.
 
 #Modules
 * `_elements.scss` All re-usable styles in here to keep to OOCSS - Remember DRY.
@@ -58,6 +58,9 @@ Once you are ready to push live use 'grunt deploy' in the command line to run co
 * `_links.scss` Styles for any text links and/or buttons.
 * `_notifications.scss` Alerts to notify or give feedback to the user
 * `_tables.scss` Styles for tables.
+
+#Ui
+* `slideshow.scss` All Ui specific styles go here in their own file. E.G - Slideshow
 
 * `main.scss` This brings all the partials together.
 
