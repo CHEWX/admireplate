@@ -27,9 +27,8 @@ module.exports = function(grunt) {
                     'Android >= 3'
                 ]
             },
-            dist: {
+            css: {
                 src: 'assets/css/main.css',
-                dest: 'assets/css/main.css'
             }
         },
         compass: {
@@ -52,7 +51,10 @@ module.exports = function(grunt) {
         watch: {
             sass: {
                 files: ['assets/css/scss/**/*.scss'],
-                tasks: ['compass:dev']
+                tasks: ['compass:dev', 'autoprefixer'],
+                options: {
+                    spawn: false,
+                }
             }
         }
 
@@ -68,7 +70,7 @@ module.exports = function(grunt) {
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['autoprefixer','watch']);
+    grunt.registerTask('default', ['watch']);
     grunt.registerTask('deploy', ['concat','uglify','compass:deploy','autoprefixer']);
 
 
