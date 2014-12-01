@@ -1420,7 +1420,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     });
 
-    function camelCase() {
+    camelCase = function() {
 
     }
 

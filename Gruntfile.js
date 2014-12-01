@@ -1,5 +1,11 @@
 module.exports = function(grunt) {
 
+    require('time-grunt')(grunt);
+
+    require('load-grunt-config')(grunt, {
+        jitGrunt: true
+    });
+
     // 1. All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
