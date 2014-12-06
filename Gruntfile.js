@@ -54,6 +54,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+        copy: {
+            main: {
+                files: [
+                    {
+                        src: ['**', '!**/bower_components/**', '!**/node_modules/**'],
+                        dest: '../theme/',
+                    }
+                ]
+            },
+        },
         watch: {
             sass: {
                 files: ['assets/css/scss/**/*.scss'],
@@ -70,6 +80,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-autoprefixer');
 
@@ -77,6 +88,7 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['watch']);
+    grunt.registerTask('theme', ['copy']);
     grunt.registerTask('deploy', ['concat','uglify','compass:deploy','autoprefixer']);
 
 
