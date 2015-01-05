@@ -1,6 +1,7 @@
 html {
 	font-size: 62.5%;
    	font-smoothing: antialiased;
+   	-webkit-font-smoothing: antialiased;
 
 	@include breakpoint(m) {
 		font-size: 56%;
@@ -38,41 +39,33 @@ h3, .h3,
 h4, .h4,
 h5, .h5 {
 	font-family: $f-header;
+	font-style: normal;
+	font-weight: normal;
 }
 
 h1, .h1 {
 	@include rem(5.0);
 	margin: 0 0 25px;
-	font-weight: 400;
-	font-style: normal;
 }
 
 h2, .h2 {
 	@include rem(4.2);
 	margin: 0 0 25px;
-	font-weight: 400;
-	font-style: normal;
 }
 
 h3, .h3 {
 	@include rem(2.6);
 	margin: 0 0 25px;
-	font-weight: 400;
-	font-style: normal;
 }
 
 h4, .h4 {
 	@include rem(1.8);
 	margin: 0 0 25px;
-	font-weight: 700;
-	font-style: normal;
 }
 
 h5, .h5 {
 	@include rem(1.6);
 	margin: 0 0 25px;
-	font-style: normal;
-	font-weight: normal;
 }
 
 p {
