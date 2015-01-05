@@ -16,7 +16,6 @@
 // Import typical layout sass modules
 @import "layout/grid";
 @import "base/type";
-@import "modules/helper";
 @import "modules/links";
 @import "modules/tables";
 @import "modules/forms";
@@ -43,3 +42,6 @@
 
 // Now this is where you put your larger site specfic sections - keep OOCSS - credit - inuit
 @import "ui/slideshow";
+
+// Helper must help cascading stylesheets so add last
+@import "modules/helper";
