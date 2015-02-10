@@ -11,8 +11,8 @@ Thumbs.db
 *.log
 tmp/
 .sass-cache/
-bower_components
-node_modules
+bower_components/
+node_modules/
 
 # ===== ASSETS =====
 
