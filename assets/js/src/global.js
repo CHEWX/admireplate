@@ -13,8 +13,18 @@
 
     });
 
+    $(window).scroll(function() {
+
+
+    });
+
+    $(window).resize(function() {
+
+
+    });
+
     camelCase = function() {
 
-    }
+    };
 
 }(jQuery, document));
