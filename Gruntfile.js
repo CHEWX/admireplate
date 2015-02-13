@@ -33,6 +33,12 @@ module.exports = function(grunt) {
                     'Android >= 3'
                 ]
             },
+            sourcemap: {
+                options: {
+                    map: true
+                },
+                src: 'assets/css/main.css',
+            },
             css: {
                 src: 'assets/css/main.css',
             }
@@ -48,7 +54,6 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     config: 'config.rb',
-                    sourcemap: true,
                     outputStyle: 'expanded',
                     force: true
                 }
