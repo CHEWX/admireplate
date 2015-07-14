@@ -11,7 +11,7 @@ a {
 
 // Default button
 .btn {
-	@include border-radius($btn-br);
+	border-radius: $btn-br;
 	background: $tertiary-color;
 	border: none;
 	color: #fff;
@@ -81,13 +81,13 @@ a {
 	border: none;
 	text-shadow: none;
 	text-transform: none;
-	@include box-shadow(none);
+	box-shadow: none;
 
 	&:hover,
 	&:focus {
 		text-decoration: underline;
 		background: transparent;
-		@include box-shadow(none);
+		box-shadow: none;
 	}
 
 	&:active {

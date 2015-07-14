@@ -3,7 +3,7 @@
 	border: 1px solid;
 	padding: 10px;
 	margin-bottom: $padding;
-	@include border-radius($br);
+	border-radius: $br;
 	@include clearfix;
 
 	&.error {
