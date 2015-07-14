@@ -37,7 +37,8 @@ gulp.task('sass', function () {
         //.pipe(sourcemaps.write())
         // Prefix that shit
         .pipe(autoprefixer())
-        .pipe(gulp.dest(output));
+        .pipe(gulp.dest(output))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('scripts', function() {
