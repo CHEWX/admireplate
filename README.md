@@ -4,24 +4,15 @@ This is a MAMP specific boilerplate but can be adapted to your own needs.
 
 ## Features
 * Uses SCSS partials to help structure the CSS.
-* Uses Compass to take advantage of CSS3 mixins so you don't have to worry about browser prefixes (-webkit- etc.).
-* Grunt to take care of watching SASS, JS and minification.
+* Uses AutoPrefixer to take advantage of CSS3 declarations so you don't have to worry about browser prefixes (-webkit- etc.).
+* Gulp to take care of watching SASS, JS and minification.
+* BrowserSync to watch your magic come to life
 * Uses Font-Awesome icon fonts for icons.
 * Uses Normalize to reset browser styles.
 
-### Install Ruby
-Admireplate uses SASS, Compass and Grunt, which rely on Ruby and NodeJS.
+## Gulp
 
-### Install the compass gem
-Open up terminal (or command line) and install compass .
-```
-$ gem update --system
-$ gem install compass
-```
-
-## Grunt
-
-Grunt will do the watching and production part of your website.
+Gulp and BrowserSync will do the watching and production part of your website.
 
 ### To use for sass watch
 
@@ -29,7 +20,7 @@ Open up terminal (or command line)
 ```
 npm install
 ```
-Then use 'grunt' in the command line to run the watch task in compass.
+Then use 'gulp' in the command line to run the watch task along with BrowserSync.
 
 Once you are ready to push live use 'grunt deploy' in the command line to run concatination and minification.
 
@@ -67,14 +58,14 @@ Once you are ready to push live use 'grunt deploy' in the command line to run co
 ## JavaScript ##
 * I've included some basic Javascript including the latest jQuery and the document ready function. You only need to edit /assets/js/src/global.js for your site styles. You would then put any plugins with-in /assets/js/libs.
 
-While dev'ing locally on MAMP, you will need to add you plugins directly into the footer. Once running Grunt this will concat into one main.min.js file, but this is for go live only.
+While dev'ing locally on MAMP, you will need to add you plugins directly into the footer. Once running Grunt this will concat into one main.js file, but this is for go live only.
 
 ## Fonts ##
 * Included font awesome for icons
 
 ## Further Documentation ##
-* <a href="http://compass-style.org/">Compass Framework</a>
-* <a href="http://gruntjs.com/">Grunt</a>
+* <a href="http://www.browsersync.io/">BrowserSync</a>
+* <a href="http://gulpjs.com/">Gulp</a>
 * <a href="http://sass-lang.com/">SASS</a>
 * <a href="http://necolas.github.com/normalize.css/">normalize.css</a>
 * <a href="http://fontawesome.io/">Font Awesome</a>
