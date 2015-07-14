@@ -41,7 +41,7 @@
 	    <script src="assets/js/libs/modernizr.js"></script>
 	    <script src="assets/js/src/global.js"></script>
 	<?php } else { ?>
-		<script src="assets/js/main.min.js"></script>
+		<script src="assets/js/main.js"></script>
 	<?php } ?>
 
 	<!-- Google Analytics here -->
