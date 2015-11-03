@@ -1,43 +1,32 @@
 {
-
-    "name": "Admireplate",
-    "authors": [
-
-        "Tom Hopcraft"
-
-    ],
-
-    "description": "A boiler plate for new sites",
-
-    "repository": {
-
-        "type" : "git",
-        "url" : "https://github.com/CHEWX/admireplate.git"
-
-    },
-
-    "keywords": [
-
-        "sass",
-    	"framework",
-        "boileplate",
-        "admireplate",
-        "grunt"
-
-    ],
-
-    "license": "Public",
-    "homepage": "https://github.com/CHEWX/admireplate",
-
-    "ignore" : [
-
-        "/assets/img/sp.png",
-        "/assets/img/cat.jpg",
-        "/README.md",
-        "/bower.json",
-        "/LICENSE",
-        "/example.html"
-
-    ]
-
+  "name": "Admireplate",
+  "authors": [
+    "Tom Hopcraft"
+  ],
+  "description": "A boiler plate for new sites",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CHEWX/admireplate.git"
+  },
+  "keywords": [
+    "sass",
+    "framework",
+    "boileplate",
+    "admireplate",
+    "grunt"
+  ],
+  "license": "Public",
+  "homepage": "https://github.com/CHEWX/admireplate",
+  "ignore": [
+    "/assets/img/sp.png",
+    "/assets/img/cat.jpg",
+    "/README.md",
+    "/bower.json",
+    "/LICENSE",
+    "/example.html"
+  ],
+  "dependencies": {
+    "modernizr": "~3.2.0",
+    "jquery": "~2.1.4"
+  }
 }
