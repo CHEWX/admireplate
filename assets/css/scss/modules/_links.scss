@@ -38,7 +38,7 @@ a {
 }
 
 // Primary action button
-.btn-primary {
+.btn--primary {
 	@extend .btn;
 	background-color: $primary-color;
 
@@ -53,7 +53,7 @@ a {
 }
 
 // Secondary action button
-.btn-secondary {
+.btn--secondary {
 	@extend .btn;
 	background-color: $secondary-color;
 
@@ -68,13 +68,13 @@ a {
 }
 
 // Call to action - slightly bigger
-.btn-cta {
+.btn--cta {
 	@include rem(1.6);
 	padding: .8em 1.6em;
 }
 
 // Link button - a button that looks like a link
-.btn-link {
+.btn--link {
 	@extend .btn;
 	color: $primary-color;
 	background: transparent;
