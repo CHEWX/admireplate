@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    gcmq = require('gulp-group-css-media-queries');
 
 // Paths
 var input = './assets/css/scss/**/*.scss',
@@ -67,8 +68,10 @@ gulp.task('watch', function() {
 gulp.task('sass-compress', function () {
     return gulp
         .src(input)
-        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(sass())
+        .pipe(gcmq())
         .pipe(autoprefixer(autoPrefixerOptions))
+        .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(gulp.dest(output));
 });
 
