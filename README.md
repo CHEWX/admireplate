@@ -7,7 +7,6 @@ This is a MAMP specific boilerplate but can be adapted to your own needs.
 * Uses AutoPrefixer to take advantage of CSS3 declarations so you don't have to worry about browser prefixes (-webkit- etc.).
 * Gulp to take care of watching SASS, JS and minification.
 * BrowserSync to watch your magic come to life
-* Uses Font-Awesome icon fonts for icons.
 * Uses Normalize to reset browser styles.
 
 ## Gulp
@@ -22,7 +21,18 @@ npm install
 ```
 Then use 'gulp' in the command line to run the watch task along with BrowserSync.
 
-Once you are ready to push live use 'grunt deploy' in the command line to run concatination and minification.
+Once you are ready to push live use 'gulp deploy' in the command line to run concatination and minification.
+
+## Bower
+
+I use bower as a package manager, the only dependancy is jQuery currently, so upon clone use.
+```
+bower install
+```
+This will pull down jQuery. If you want to add more to your project just run
+```
+bower install *package* --save
+```
 
 ## CSS
 
@@ -45,7 +55,7 @@ Once you are ready to push live use 'grunt deploy' in the command line to run co
 * `_elements.scss` All re-usable styles in here to keep to OOCSS - Remember DRY.
 * `_forms.scss` Some basic form styles.
 * `_helper.scss` Helper classes.
-* `_icons.scss` This is Font Awesome's CSS stylesheet.
+* `_icons.scss` This is SVG icons
 * `_links.scss` Styles for any text links and/or buttons.
 * `_notifications.scss` Alerts to notify or give feedback to the user
 * `_tables.scss` Styles for tables.
@@ -58,17 +68,13 @@ Once you are ready to push live use 'grunt deploy' in the command line to run co
 ## JavaScript ##
 * I've included some basic Javascript including the latest jQuery and the document ready function. You only need to edit /assets/js/src/global.js for your site styles. You would then put any plugins with-in /assets/js/libs.
 
-While dev'ing locally on MAMP, you will need to add you plugins directly into the footer. Once running Grunt this will concat into one main.js file, but this is for go live only.
-
-## Fonts ##
-* Included font awesome for icons
+While dev'ing locally on MAMP, you will need to add you plugins directly into the footer. Once running Gulp this will concat into one main.js file, but this is for go live only.
 
 ## Further Documentation ##
 * <a href="http://www.browsersync.io/">BrowserSync</a>
 * <a href="http://gulpjs.com/">Gulp</a>
 * <a href="http://sass-lang.com/">SASS</a>
 * <a href="http://necolas.github.com/normalize.css/">normalize.css</a>
-* <a href="http://fontawesome.io/">Font Awesome</a>
 
 ## Credit
 
