@@ -24,39 +24,40 @@
     }
 }
 
-@mixin breakpoint($point) {
-    @if $point == l {
-	    @media (max-width: $l-max) { @content; }
-    }
-    @else if $point == m {
-		@media (max-width: $m-max)  { @content; }
-    }
-    @else if $point == s {
-		@media (max-width: $s-max)  { @content; }
+@mixin heightpoint($max) {
+    @media (min-height: 0px ) and (max-height: $max) {
+        @content;
     }
 }
 
-@mixin mobilefirst($point) {
-    @if $point == l {
-        @media screen and (min-width: $l-max + 1) { @content; }
-    }
-    @else if $point == m {
-        @media screen and (min-width: $m-max + 1) { @content; }
-    }
-    @else if $point == s {
-        @media screen and (min-width: $s-max + 1) { @content; }
-    }
-    @else {
-        @media screen and (min-width: $point) { @content; }
+@mixin mobilefirst($res) {
+    @media screen and (min-width: $res) {
+        @content;
     }
 }
 
 // Rem font-size PX fallback
 @mixin rem($sizeValue: 1.6) {
+    // Fallback
     font-size: ($sizeValue * 10) + px;
-    font-size: $sizeValue + rem;
+    font-size: rem-calc(($sizeValue * 10));
 }
 // USAGE - @include rem(1.2);
+
+// REM RWD using maps
+@mixin rem-rwd($fs-map, $fs-breakpoints: $breakpoints) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == null {
+            @include rem( $fs-font-size );
+        }
+        @else {
+            @include breakpoint( $fs-breakpoint down ) {
+                @include rem( $fs-font-size );
+            }
+        }
+    }
+}
+// USAGE - @include rem-rwd($fs-body);
 
 // Cross-browser opacity
 @mixin opacity($opacity, $ie-support:true) {

@@ -13,11 +13,14 @@
 // Import typical layout sass modules
 @import "layout/grid";
 @import "base/type";
+// Small re-usuable components prefixed with c-
+@import "modules/components";
 @import "modules/links";
 @import "modules/tables";
 @import "modules/forms";
-@import "modules/notifications";
-@import "modules/elements";
+// @import "modules/notifications";
+// Large re-usuable modules prefixed with m-
+@import "modules/modules";
 
 // Use for icons
 @import "modules/icons";
@@ -27,6 +30,9 @@
 
 // Main layout styles - l-header - l-footer
 @import "layout/layout";
+
+// Specific page styles
+@import "layout/pages";
 
 // Print styles
 @import "base/print";
