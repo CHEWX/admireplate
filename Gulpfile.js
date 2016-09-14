@@ -7,7 +7,9 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     browserSync = require('browser-sync').create(),
-    gcmq = require('gulp-group-css-media-queries');
+    gcmq = require('gulp-group-css-media-queries'),
+    svg2png = require('gulp-svg2png'),
+    svgSymbols = require('gulp-svg-symbols');
 
 // Paths
 var input = './assets/css/scss/**/*.scss',
@@ -75,10 +77,28 @@ gulp.task('sass-compress', function () {
         .pipe(gulp.dest(output));
 });
 
+gulp.task('svg', function () {
+    return gulp
+        .src( 'assets/img/icons/svg/**/*.svg' )
+        .pipe( svg2png() )
+        .pipe( gulp.dest( 'assets/img/icons/png/' ) )
+});
+
+gulp.task('sprites', ['svg'], function () {
+    return gulp
+        .src( 'assets/img/icons/svg/**/*.svg' )
+        .pipe(
+            svgSymbols({
+                className: '.icon--%f'
+            })
+        )
+        .pipe( gulp.dest( 'assets/img/icons/' ) )
+});
+
 gulp.task('sync', function() {
     browserSync.init({
         open: false,
-        proxy: "localhost:8888"
+        proxy: "sitename.dev"
     });
 });
 
