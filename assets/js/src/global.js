@@ -2,9 +2,28 @@
     // globals
     var touchDev = Modernizr.touch;
 
+    var waitForFinalEvent = (function () {
+
+        var timers = {};
+
+        return function(callback, ms, uniqueId) {
+            if(!uniqueId) {
+                // don't call this twice without a uniqueID
+                uniqueId = Math.random()*1000;
+            }
+            if(timers[uniqueId]) {
+                clearTimeout(timers[uniqueId]);
+            }
+            timers[uniqueId] = setTimeout(callback, ms);
+        };
+    })();
+
     $(document).ready(function() {
 
-    	camelCase();
+        // Plugin
+
+        // App
+        app.camelCase();
 
     });
 
@@ -20,11 +39,40 @@
 
     $(window).resize(function() {
 
+        waitForFinalEvent(function() {
+
+
+
+        }, 300, 'init');
 
     });
 
-    camelCase = function() {
+    // App Functions
 
-    };
+    var app = {
+
+        camelCase : function() {
+
+        }
+
+    }
+
+    // Helper Functions
+
+    var helper = {
+
+    }
+
+    // Plugin Functions
+
+    var init = {
+
+        foundation : function() {
+
+            // $(document).foundation();
+
+        }
+
+    }
 
 }(jQuery, document));
